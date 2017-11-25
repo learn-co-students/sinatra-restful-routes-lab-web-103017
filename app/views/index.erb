@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+    <% @recipes.each do |recipe| %>
+      <a href= <%= "/recipes/#{recipe.id}" %>><h1><%= recipe.name %></h1></a>
+      <li> <%= recipe.ingredients %></li>
+      <li> <%= recipe.cook_time %></li>
+      <p><%= recipe.id%></p>
+    <%end%>
+    </ul>
+    <p>The Booegey Man Cometh</p>
+  </body>
+</html>
